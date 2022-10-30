@@ -8,14 +8,22 @@ namespace MoodAnalyzer
 {
     public class Mood
     {
+        public string msg;
+        public Mood()
+        {
+
+        }
+        public Mood(string msg)
+        {
+            this.msg=msg;
+        }
+
 
         public string Analyser()
         {
-            Console.WriteLine("Enter you Mood: ");
-            string str =Console.ReadLine();
-            if (str == "i am in sad mood")
+            if (msg == "i am in sad mood")
                 return "SAD";
-            else if (str == "i am in any mood")
+            else if (msg == "i am in any mood")
                 return "HAPPY";
             else
                 return "INVALID";
